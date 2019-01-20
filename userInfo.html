@@ -1,0 +1,35 @@
+<md-dialog aria-label="Contact (List)">
+    <form ng-cloak>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <h2 style="text-transform:capitalize">{{objContact.name.first}} {{objContact.name.last}}</h2>
+          <span flex></span>
+          <md-button class="md-icon-button" ng-click="cancel()">
+                <md-icon class="md-24" aria-label="Close dialog">close</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+  
+      <md-dialog-content>
+        <div class="md-dialog-content">
+                <md-list layout="row" layout-wrap>
+                        <md-list-item class="md-3-line" flex layout layout-xs="column">
+                            <img ng-src="{{objContact.picture.large}}" class="md-avatar ctAvatar" />
+                            <div class="md-list-item-text" layout="column">
+                                <h3 class="font-500" style="text-transform:capitalize;font-size: 18px;">{{objContact.name.first}} <span>{{objContact.name.last}}</span></h3>
+                                <p>{{objContact.login.username}} </p>
+                                <h4>Email: {{objContact.email}}</h4>
+                                <h4>Cell: {{objContact.cell}}</h4>
+                                <h4>Street: {{objContact.location.street}}</h4>
+                                <h4>City: {{objContact.location.city}}</h4>
+                                <h4>State: {{objContact.location.state}}</h4>
+                                <h4>Postal Code: {{objContact.location.postcode}}</h4>
+                            </div>
+                        </md-list-item>
+                        
+                    </md-list>
+        </div>
+      </md-dialog-content>
+  
+    </form>
+  </md-dialog>
